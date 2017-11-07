@@ -1,0 +1,12 @@
+D:\C++\TxT\TxT\bin\Debug\TxT.exe.config
+D:\C++\TxT\TxT\bin\Debug\TxT.exe
+D:\C++\TxT\TxT\bin\Debug\TxT.pdb
+D:\C++\TxT\TxT\obj\Debug\TxT.csprojResolveAssemblyReference.cache
+D:\C++\TxT\TxT\obj\Debug\TxT.Form1.resources
+D:\C++\TxT\TxT\obj\Debug\TxT.Form2.resources
+D:\C++\TxT\TxT\obj\Debug\TxT.Properties.Resources.resources
+D:\C++\TxT\TxT\obj\Debug\TxT.csproj.GenerateResource.Cache
+D:\C++\TxT\TxT\obj\Debug\TxT.exe
+D:\C++\TxT\TxT\obj\Debug\TxT.pdb
+D:\C++\TxT\TxT\obj\Debug\TxT.login.resources
+D:\C++\TxT\TxT\obj\Debug\TxT.Regist.resources
