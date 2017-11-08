@@ -153,11 +153,10 @@
             // 
             // pass
             // 
-            this.pass.Location = new System.Drawing.Point(159, 63);
+            this.pass.Location = new System.Drawing.Point(160, 63);
             this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(113, 21);
+            this.pass.Size = new System.Drawing.Size(112, 21);
             this.pass.TabIndex = 12;
-            this.pass.Text = "   ";
             // 
             // Regist
             // 

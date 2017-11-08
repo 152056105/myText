@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using MySql.Data.Common;
 namespace TxT
 {
     public partial class Regist : Form
@@ -32,14 +34,30 @@ namespace TxT
             }
             string birth = birthday.Text;
             string phone = telephone.Text;
-            User user = new User();
-            user.Usernmae = usernamer;
-            user.Password = password;
-            user.Gender = gender;
-            user.Birthday = birth;
-            user.Phone = phone;
-            //注册方法
-            
+
+            if ((usernamer == "") || (password == "") || (gender == "") || (phone == ""))
+            {
+                MessageBox.Show("所需填写内容不能为空！");                                                                        
+
+            }
+            else {
+                TxT.mysql.ConnFactory conn = new mysql.ConnFactory();
+                string sql1 = "select * from `user` where `username`='" + usernamer + "'";
+                MySqlDataReader reader = conn.getmysqlread(sql1);
+                if (!reader.HasRows)
+                {
+                    string sql = "INSERT INTO `user` (`username`, `password`, `gender`, `birthday`, `phone`) VALUES ('" + usernamer + "', '" + password + "', '" + gender + "', '" + birth + "', '" + phone + "')";
+                    conn.getmysqlcom(sql);
+                    login log = new login();
+                    log.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("此用户名已经被注册！");
+                }
+            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

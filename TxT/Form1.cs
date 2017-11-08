@@ -13,12 +13,13 @@ namespace TxT
     public partial class Form1 : Form
     {
         private login log;
-
+        public string str;
         public Form1(login termp)
         {
             InitializeComponent();
             log = termp;
-            label1.Text = log.strname;
+            str = log.strname;
+            label1.Text = str;
 
         }
         public Form1()
@@ -38,7 +39,7 @@ namespace TxT
 
         private void 新建笔记ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(this);
             form2.Show();
         }
 
